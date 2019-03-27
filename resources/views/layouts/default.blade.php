@@ -5,16 +5,21 @@
 
 <body>
 
-@include('includes.menu')
+<div class="container">
+    <header>
+        @include('includes.menu')
+    </header>
 
     <main role="main">
-    @yield('content')
+        @yield('content')
     </main>
 
 
-@include('includes.jsfooter')
+    @include('includes.jsfooter')
+    <footer>
+        @include('includes.footer')
+    </footer>
 
-@include('includes.footer')
-
+</div>
 </body>
 </html>
