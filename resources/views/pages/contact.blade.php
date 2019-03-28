@@ -8,12 +8,12 @@
         </div>
 
         <div class="card-body">
-            <form action="/contact" method="post">
+            <form role="form" id="contact-form" method="POST" action="{{route('contact.store')}}">
                 {{ csrf_field() }}
 
                 <div class="form-group">
-                    <label for="yourname">Name</label>
-                    <input name="yourname" class="form-control" id="yourname" placeholder="Your Name">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name">
                 </div>
 
                 <div class="form-group">
