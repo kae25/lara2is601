@@ -1,11 +1,29 @@
-
 @extends('layouts.default')
 
 @section('content')
 
+    <div class="card mt-3 pl-2 pr-2">
+        <div class="card-title"><h1>Contact</h1>
+            <p class="lead">Please use this form to contact the site owner.</p>
+        </div>
 
-    <h1>This is my contact page!</h1>
-    <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+        <div class="card-body">
+            <form action="/contact" method="post">
+                {{ csrf_field() }}
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input name="email" class="form-control" id="email" placeholder="name@example.com">
+                </div>
 
+                <div class="form-group">
+                    <label for="body">Message</label>
+                    <textarea name="body" class="form-control" id="body" rows="3"></textarea>
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
 @endsection
