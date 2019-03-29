@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Http\Request;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -11,18 +13,12 @@
 |
 */
 
-Route::middleware('auth:api')->get('/user', 'PagesController@show')->name('show');
-
-
-
-    //function (Request $request) {
-    //return $request->user();
-//});
+Route::middleware('auth:api')->get('/user', function (Request $request) {
+    return $request->user();
+});
 
 //Route::get('/', function () {
 //return view('pages.home');}
 
 
 //Route::get('/', 'PagesController@home')->name('home');
-
-//Route::get('/user', 'PagesController@show')->name('show');

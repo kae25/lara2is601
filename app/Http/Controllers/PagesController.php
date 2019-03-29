@@ -28,10 +28,6 @@ class PagesController extends Controller
         return view('pages.thankyou')->with(compact('name'));
     }
 
-    function show(Request $request) {
-        return $request->user();
-    }
-
 
 }
 
